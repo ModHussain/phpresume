@@ -8,8 +8,11 @@
 
     <!-- Import Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" >
+	  <link rel="icon" type="image/jpg" href="img/icon.jpg">
+    
 
     <!-- Import Theme & Components -->
+	  
     <link href="css/theme.min.css" rel="stylesheet">
 
     <!-- Import Fonts -->
