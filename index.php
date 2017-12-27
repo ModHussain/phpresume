@@ -5,24 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My Resume </title>
-
+	<link rel="icon" type="image/jpg" href="img/icon.jpg">
     <!-- Import Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" >
-	  <link rel="icon" type="image/jpg" href="img/icon.jpg">
-    
 
     <!-- Import Theme & Components -->
-	  
     <link href="css/theme.min.css" rel="stylesheet">
 
     <!-- Import Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
+<style>
 
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+}
+
+
+</style>
   </head>
 
-  <body id="top" data-spy="scroll" data-target="#navbar" data-offset="340">
+  <body id="top" onload="myFunction()" style="margin:0;" data-spy="scroll" data-target="#navbar" data-offset="340">
+  <div id="loader"><img src="img/naruto.gif" width="70" height="70"></div>
+ <div style="display:none;" id="myDiv" class="animate-bottom">
+  
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -103,7 +135,7 @@
               <span class="col-md-3 col-md-offset-1 side-note">Who I am ?</span>
               <div class="col-md-6 resume-card">
                 <h3 class="title">I’m Hussain, nice to meet you.</h3>
-                <p>I'm a Hussain based Front-End developer and UI designer. Post Graduated from PVPSIT in 2017 and currently learning UI technology at ZCH. </p>
+                <p>I'm a Hussain based Front-End developer and UI designer. Post Graduated from PVPSIT in 2017 and currently learning UI technologies </p>
 
                 <p>Hoping to develop my career into making Web apps and Mobile apps the like! Also love to do photo manipulation in Photoshop every once in a while :-)</p>
               </div>
@@ -490,6 +522,19 @@
 
     <!-- Load main js -->
     <script src="js/main.min.js"></script>
+	
+	<script>
+var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 5000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
