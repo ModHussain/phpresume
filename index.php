@@ -70,7 +70,7 @@
 <center><div class="flex-container" id="loader">
   <div>
   
-  <img src="img/naruto.gif" class="img-responsive" width="100" height="100">
+  <img src="img/shari.gif" class="img-responsive" width="100" height="100">
   
 
 </div>
