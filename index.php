@@ -48,12 +48,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 500px;
+  height: 200px;
   
 }
 
 .flex-container>div {
-  background-color: #f1f1f1;
   color: white;
   width: 100px;
   height: 100px;
