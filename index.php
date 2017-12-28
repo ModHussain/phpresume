@@ -19,9 +19,6 @@
 <style>
 
 #loader {
-  position: absolute;
-  left: 50%;
-  top: 50%;
 }
 
 /* Add animation to "page content" */
@@ -47,12 +44,38 @@
   display: none;
 }
 
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  
+}
+
+.flex-container>div {
+  background-color: #f1f1f1;
+  color: white;
+  width: 100px;
+  height: 100px;
+}
+
+
 
 </style>
   </head>
 
   <body id="top" onload="myFunction()" style="margin:0;" data-spy="scroll" data-target="#navbar" data-offset="340">
-  <div id="loader"><img src="img/naruto.gif" width="70" height="70"></div>
+	  
+  
+<center><div class="flex-container" id="loader">
+  <div>
+  
+  <img src="img/naruto.gif" class="img-responsive" width="100" height="100">
+  
+
+</div>
+
+</div></center>
  <div style="display:none;" id="myDiv" class="animate-bottom">
   
     <nav class="navbar navbar-inverse navbar-fixed-top">
