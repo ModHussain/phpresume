@@ -16,6 +16,7 @@
     <!-- Import Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="animate.css">
 
 <style>
 
@@ -58,7 +59,12 @@
   width: 100px;
   height: 100px;
 }
-
+#up{
+position: fixed;
+right:30px;
+bottom: 20px;
+display:none;
+}
 
 
 </style>
@@ -80,8 +86,7 @@
   
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
+            <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
@@ -91,8 +96,7 @@
           <a class="navbar-brand page-scroll" href="#top">My Resume</a>
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="navbar">
+           <div class="collapse navbar-collapse" id="navbar">
           <ul class="nav navbar-nav">
             <li><a class="page-scroll hidden-xs hidden-sm hidden-md hidden-lg" href="#top"></a></li>
             <li><a class="page-scroll" href="#about-me">About me</a></li>
@@ -142,7 +146,7 @@
         </div>
       </div>
     </section>
-
+<a href="" target="Top" id="up"><i class="glyphicon glyphicon-upload " id="s" style="font-size:35px;color:red"></i></a>
     <div class="resume-container">
       <section id="about-me" class="resume-section">
         <article class="container">
@@ -534,16 +538,16 @@
       <p>© 2017 MyResume.All Rights are Reserved By Hussain</p>
     </footer>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
-    <!-- Latest compiled and minified JavaScript -->
+    
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
-    <!-- jQuery Easing -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <!-- Load main js -->
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    
     <script src="js/main.min.js"></script>
 	
 	<script>
@@ -559,6 +563,28 @@ function showPage() {
 }
 </script>
 
+	 
+	 <script>
+
+window.onscroll = function(){showbut()};
+
+function showbut() {
+	
+    if ( document.body.scrollTop > 50) {
+	$("#up").show();
+	$("#up").addClass('animated flip');
+    	
+	} else {
+	$("#up").hide();	
+    
+	}
+	
+}
+
+
+</script>
+	 
+	 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
