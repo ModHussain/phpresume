@@ -211,7 +211,7 @@ body {
               <span class="col-md-3 col-md-offset-1 side-note">Who I am ?</span>
               <div class="col-md-6 resume-card">
                 <h3 class="title">I’m Hussain, nice to meet you.</h3>
-                <p>I'm a Hussain based Front-End developer and UI designer. Post Graduated from PVPSIT in 2017 and currently learning UI technologies </p>
+                <p>I'm a Hussain based Front-End developer and UI designer. Post Graduated from PVPSIT in 2017 and currently I am working as UI Developer at OJAS Innovative Technologies Pvt Ltd </p>
 
                 <p>Hoping to develop my career into making Web apps and Mobile apps the like! Also love to do photo manipulation in Photoshop every once in a while :-)</p>
               </div>
@@ -584,7 +584,7 @@ body {
     </div>
 
     <footer class="text-center">
-      <p>© 2017 MyResume.All Rights are Reserved By Hussain</p>
+      <p>© 2018 MyResume.All Rights are Reserved By Hussain</p>
     </footer>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
