@@ -69,7 +69,7 @@ display:none;
 body {
 	width: 100wh;
 	height: 90vh;
-	color: #fff;
+	color: #000;
 	background: linear-gradient(-45deg, #EE7752, #e8182b, #23A6D5, #23D5AB);
 	background-size: 400% 400%;
 	-webkit-animation: Gradient 15s ease infinite;
@@ -119,7 +119,7 @@ body {
 </style>
   </head>
 
-  <body id="top" onload="myFunction()" style="margin:0;" data-spy="scroll" data-target="#navbar" data-offset="340">
+  <body id="top" onload="myFunction()" style="margin:0;" data-spy="scroll" data-target="#navbar" data-offset="340" onkeypress="return disableCtrlKeyCombination(event);" onkeydown="return disableCtrlKeyCombination(event);">
 	  
   
 <center><div class="flex-container" id="loader">
@@ -644,6 +644,84 @@ function showbut() {
       ga('send', 'pageview');
 
     </script>
+	
+	<script language="JavaScript">
+//////////F12 disable code////////////////////////
+    document.onkeypress = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+           //alert('No F-12');
+            return false;
+        }
+    }
+    document.onmousedown = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+            //alert('No F-keys');
+            return false;
+        }
+    }
+document.onkeydown = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+            //alert('No F-keys');
+            return false;
+        }
+    }
+/////////////////////end///////////////////////
+//Disable right click script 
+//visit http://www.rainbow.arch.scriptmania.com/scripts/ 
+var message="Sorry, right-click has been disabled"; 
+/////////////////////////////////// 
+function clickIE() {if (document.all) {(message);return false;}} 
+function clickNS(e) {if 
+(document.layers||(document.getElementById&&!document.all)) { 
+if (e.which==2||e.which==3) {(message);return false;}}} 
+if (document.layers) 
+{document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;} 
+else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;} 
+document.oncontextmenu=new Function("return false") 
+// 
+function disableCtrlKeyCombination(e)
+{
+//list all CTRL + key combinations you want to disable
+var forbiddenKeys = new Array('a', 'u', 'c', 'x', 'v', 'j' , 'w');
+var key;
+var isCtrl;
+if(window.event)
+{
+key = window.event.keyCode;     //IE
+if(window.event.ctrlKey)
+isCtrl = true;
+else
+isCtrl = false;
+}
+else
+{
+key = e.which;     //firefox
+if(e.ctrlKey)
+isCtrl = true;
+else
+isCtrl = false;
+}
+//if ctrl is pressed check if other key is in forbidenKeys array
+if(isCtrl)
+{
+for(i=0; i<forbiddenKeys.length; i++)
+{
+//case-insensitive comparation
+if(forbiddenKeys[i].toLowerCase() == String.fromCharCode(key).toLowerCase())
+{
+//alert('Key combination CTRL + '+String.fromCharCode(key) +' has been disabled.');
+return false;
+}
+}
+}
+return true;
+}
+</script>
+	 
+	 
 
   </body>
 </html>
