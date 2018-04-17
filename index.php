@@ -685,7 +685,7 @@ document.oncontextmenu=new Function("return false")
 function disableCtrlKeyCombination(e)
 {
 //list all CTRL + key combinations you want to disable
-var forbiddenKeys = new Array('a', 'u', 'c', 'x', 'v', 'j' , 'w');
+var forbiddenKeys = new Array('a', 'u', 'c', 'x', 'v', 'j' , 'w','s');
 var key;
 var isCtrl;
 if(window.event)
