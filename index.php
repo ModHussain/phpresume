@@ -66,7 +66,7 @@ bottom: 20px;
 display:none;
 }
 
-body {
+bo {
 	width: 100wh;
 	height: 90vh;
 	color: #000;
